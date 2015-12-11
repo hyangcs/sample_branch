@@ -418,4 +418,7 @@ class SysAdminHubDetail < ActiveRecord::Base
     hub.save!
   end
 
+  def sample_code
+  end
+
 end
