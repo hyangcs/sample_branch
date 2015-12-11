@@ -59,7 +59,7 @@ class Sysadmin::Hub::SysAdminHubEntryController < Sysadmin::Hub::SysAdminHubCont
 	#############################################################################
 	#############################################################################  
 	def get_result_set
-		raise ArgumentError.new() unless params[:eid]
+    raise ArgumentError.new() unless params[:eid]
     entity_id = params[:eid]
     limit       = params[:limit].blank? ? nil : params[:limit]
     offset      = params[:start].blank? ? nil : params[:start]
