@@ -1,3 +1,4 @@
+# This is Sys admin Detail class
 class SysAdminHubDetail < ActiveRecord::Base
 	 belongs_to :sys_admin_hub_field_status
    belongs_to :sys_admin_hub_item
@@ -211,7 +212,6 @@ class SysAdminHubDetail < ActiveRecord::Base
   #############################################################################
   def self.check_user_privilege(entity_id, workflow_type, dept_id =nil)
     status = false
-        # Check to see if the department is required
     if dept_id
       results = User.select('DISTINCT u.id, rmdar.*').
                joins('AS u JOIN user_profiles AS up ON (up.user_id = u.id)').
